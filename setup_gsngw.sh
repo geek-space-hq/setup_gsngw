@@ -108,7 +108,7 @@ EOF
 ## rabbit_house（すみどら拠点）
 cat > /etc/tinc/gsnet/hosts/rabbit_house <<'EOF'
 # rabbit_house
-Address = rabbit_house.smdr.io
+Address = rabbit-house.smdr.io
 Port = 655
 
 -----BEGIN RSA PUBLIC KEY-----
@@ -131,6 +131,7 @@ ConnectTo = gsngw01
 ConnectTo = suzukautako
 ConnectTo = linuweb
 ConnectTo = kimon
+ConnectTo = rabbit_house
 EOF
 
 # tinc-up スクリプトの作成
