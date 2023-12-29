@@ -91,7 +91,7 @@ EOF
 
 ## nagasaki (にむC拠点)
 cat > /etc/tinc/gsnet/hosts/nagasaki <<'EOF'
-# kimon
+# nagasaki
 Address = nagasaki.hiyoco.club
 Port = 655
 
@@ -114,7 +114,7 @@ Device = /dev/net/tun
 ConnectTo = gsngw01
 ConnectTo = suzukautako
 ConnectTo = linuweb
-ConnectTo = kimon
+ConnectTo = nagasaki
 EOF
 
 # tinc-up スクリプトの作成
