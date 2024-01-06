@@ -105,6 +105,22 @@ Wmq4xhdC4nMCJBVHr4sfwGLHw9vUgiMtSBP6mV5huKn9GePXQTfCmOm3es9KTgwe
 -----END RSA PUBLIC KEY-----
 EOF
 
+## rabbit_house（すみどら拠点）
+cat > /etc/tinc/gsnet/hosts/rabbit_house <<'EOF'
+# rabbit_house
+Address = rabbit-house.smdr.io
+Port = 655
+
+-----BEGIN RSA PUBLIC KEY-----
+MIIBCgKCAQEA2YqqCPwg9NgiYbUkHtGhUwQ83u0aIqLNdxeFBX8BatP1hVzXEUAW
+/EzLV9SzvkAMKrYypiiJpS9mZ+hctuvGiA5Ci72txrrWW+/UHix9cAHinHRMkBCq
+9MF8BzWsOfhyfcpBozRGfBscoBtq3w408m+YnNzp6hv8Q+nbQgWGYEj7P2PW3PUe
+wVyh3oOu8PPtaRD1RYgoPdfzkYXmcJTVQFheuZ5dG3vZV3ttlghD9YrQSepzGpyG
+X9sorXTYsVs/MJ2gNYGdvuoLJzAWsVNReeVmXC2R/arbtvWmM7QhTkIt7yyOiovh
+f9gnQBP7NW0dNuP0jdQAt/2RU5KmXpoJJwIDAQAB
+-----END RSA PUBLIC KEY-----
+EOF
+
 # tinc.conf の作成
 # gsngw01 -> miminashi拠点, suzukautako -> 島村拠点
 sed -e 's/{NODE_NAME}/'"${node_name}"'/' > /etc/tinc/gsnet/tinc.conf <<'EOF'
@@ -115,6 +131,7 @@ ConnectTo = gsngw01
 ConnectTo = suzukautako
 ConnectTo = linuweb
 ConnectTo = kimon
+ConnectTo = rabbit_house
 EOF
 
 # tinc-up スクリプトの作成
