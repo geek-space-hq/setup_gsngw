@@ -201,7 +201,7 @@ chmod +x /etc/tinc/gsnet/tinc-down
 
 # 鍵ペアの生成
 # tincの src/conf.c:541 を見ると標準入力と標準出力のどちらかが端末でない場合はデフォルトのファイル名を用いるようなので、`| cat` をつけている
-sudo tincd -K -n gsnet | cat
+tincd -K -n gsnet | cat
 
 # デバッグログの有効化
 sed -i -e '/^# EXTRA="-d"$/ s/# //' /etc/default/tinc
@@ -224,4 +224,4 @@ printf '\n'
 printf 'Enterを押すとOSを再起動します'
 read -r l
 
-sudo reboot
+reboot
