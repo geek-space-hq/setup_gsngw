@@ -89,19 +89,19 @@ VGzpoWRx9iYbayS2D6hv5auhL1JBI4Zx+uNBuhIz4dAMMSyIksW9PthQsMPZbW+x
 -----END RSA PUBLIC KEY-----
 EOF
 
-## kimon (にむC拠点)
-cat > /etc/tinc/gsnet/hosts/kimon <<'EOF'
-# kimon
-Address = kujira.club
+## nagasaki (にむC拠点)
+cat > /etc/tinc/gsnet/hosts/nagasaki <<'EOF'
+# nagasaki
+Address = nagasaki.hiyoco.club
 Port = 655
 
 -----BEGIN RSA PUBLIC KEY-----
-MIIBCgKCAQEA2ke3eRn5GzPwutPQVdU2gfCXCTCX6tDMlDG88eaTk+Thj+BU9UJO
-rKuTgQ6t8UsjP8youZ+S7LQdACoEl9S5BXtbehUjBkIlwdoXcNvhH+L7+81j289f
-fh6O3nMrocYwYVlarHOYbY6WcBKS4so2oRI+kWSn1+U41H0b3M6RT5FBNQszDg63
-UI6GizCXCh9T1tTQOyMHQhQWLH3GX87F3SjH+0vlzm78LaXTx6mbS8hmHSxLSv3l
-Wmq4xhdC4nMCJBVHr4sfwGLHw9vUgiMtSBP6mV5huKn9GePXQTfCmOm3es9KTgwe
-+Q0eeXSXyWhAgH74alp3BmPQxUIQwCKuSQIDAQAB
+MIIBCgKCAQEA/hZ2f4TyZMHVuZ0xBaQFpqqGKM0fzSeWWbRO7/Tu/bnphPXnkKJy
+oJ155eklyy1lc+Syt+MWs+epbyZz1dJZMLkf4b7Bi+M46bDrCYdod4P1KZsFfjFL
+Pju/vthOEF3T3Wc8iQo7VcSM1IBu/ILBN+LPWiYRBf3+BDtRD1C1+lT5YR0DJaWO
+rqD9Al+4XnPIjLUy0gw5h4+joC7FD2X2fbTksD+fk5rgysXlU/C6AncRU7U7iTBh
+HJAoR6wVk4uf533Ri4C6wqAVUdUYNfGJCKf24is+Oun046iBUWu+fY6wCrdKpyGq
+w97eARBoit60i6Z/coiYqBrYmewR0tSMzwIDAQAB
 -----END RSA PUBLIC KEY-----
 EOF
 
@@ -130,7 +130,7 @@ Device = /dev/net/tun
 ConnectTo = gsngw01
 ConnectTo = suzukautako
 ConnectTo = linuweb
-ConnectTo = kimon
+ConnectTo = nagasaki
 ConnectTo = rabbit_house
 EOF
 
