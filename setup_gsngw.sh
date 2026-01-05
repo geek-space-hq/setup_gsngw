@@ -121,6 +121,22 @@ f9gnQBP7NW0dNuP0jdQAt/2RU5KmXpoJJwIDAQAB
 -----END RSA PUBLIC KEY-----
 EOF
 
+## chiyomomo (wing拠点, IPv6 only)
+cat > /etc/tinc/gsnet/hosts/chiyomomo <<'EOF'
+# chiyomomo
+Address = chiyomomo.sz7.jp
+Port = 655
+
+-----BEGIN RSA PUBLIC KEY-----
+MIIBCgKCAQEAvWHbmjKdpbvJHgIABzKPl33YAmxkUKwdoSTkKJiygjYTDK9ufOW7
+oMvtlflYzFoQ3hU4OjG9LBFTBYcTTIW0sgSz+/fKhoW/RMnKJKhVgUXVSMpNxCSd
+FvmmnoXm3ZQqvVH5sNFLnVmq43M41tx8O5y6qn4on/g428Z+nd9RCmQYObIhiEbt
+cCO91IONa16CWMNU1o6NFTgXOhmUwdDw+3tzusCp5WDOrkopSr3NAAwG1OOoKRLa
+Me+yOR1+mxEEElIdVCM5HEIgYZvZn0lfhCQCpBRORKyE7V9XUZB6EPdi9xNLR85d
+QcK8rFtHLVtVAMVQ7PtA9vHCXtNsFHTWZwIDAQAB
+-----END RSA PUBLIC KEY-----
+EOF
+
 # tinc.conf の作成
 # gsngw01 -> miminashi拠点, suzukautako -> 島村拠点
 sed -e 's/{NODE_NAME}/'"${node_name}"'/' > /etc/tinc/gsnet/tinc.conf <<'EOF'
@@ -132,6 +148,7 @@ ConnectTo = suzukautako
 ConnectTo = linuweb
 ConnectTo = nagasaki
 ConnectTo = rabbit_house
+ConnectTo = chiyomomo
 EOF
 
 # tinc-up スクリプトの作成
